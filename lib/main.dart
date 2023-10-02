@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:tic_tac_toe/screen/game_screen.dart';
 import 'package:tic_tac_toe/screen/home_screen.dart';
 
 void main() {
@@ -14,6 +13,7 @@ class Application extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
+      theme: ThemeData(fontFamily: 'Modern'),
       debugShowCheckedModeBanner: false,
       home: HomeScreen(),
     );
