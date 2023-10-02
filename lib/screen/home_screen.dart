@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_svg/flutter_svg.dart';
+import 'package:tic_tac_toe/screen/aboutus_page.dart';
+//import 'package:flutter_svg/flutter_svg.dart';
 import 'package:tic_tac_toe/screen/game_screen.dart';
 
 class HomeScreen extends StatelessWidget {
@@ -19,6 +20,7 @@ class HomeScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        //leading: BackButton(color: Colors.black),
         elevation: 0,
         backgroundColor: Colors.grey[900],
       ),
@@ -44,7 +46,7 @@ class HomeScreen extends StatelessWidget {
                     textAlign: TextAlign.center,
                     style: TextStyle(color: Colors.red[300], fontSize: 20),
                   ),
-                  SizedBox(height: 85),
+                  SizedBox(height: 55),
                   ClipRRect(
                     child: Image.asset('images/s1.png'),
                     borderRadius: BorderRadius.circular(20),
@@ -74,7 +76,12 @@ class HomeScreen extends StatelessWidget {
                       side: BorderSide(
                           color: Colors.blue, style: BorderStyle.solid),
                     ),
-                    onPressed: () {},
+                    onPressed: () {
+                      navigatePage(
+                        context,
+                        AboutUs(),
+                      );
+                    },
                     child: Text(
                       'about us',
                       style:
